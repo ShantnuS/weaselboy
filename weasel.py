@@ -12,9 +12,15 @@ def create_individual(size):
     individual = [] 
     for _ in range(size):
         ascii_index = random.randint(32,127)
-        individual.append(str(chr(ascii_index)))
-    print("Created the individual: " + list_to_string(individual))    
+        individual.append(str(chr(ascii_index))) 
     return individual
+
+def calculate_fitness(individual):
+    fitness = 0
+    for index, item in enumerate(individual):
+        if item == target[index]:
+            fitness += 1
+    return fitness
 
 def main():
     size = len(target) #This is how long the individuals will be 
@@ -23,4 +29,11 @@ def main():
     individual1 = create_individual(size)
     individual2 = create_individual(size)
 
+    print(calculate_fitness(individual1))
+
+    '''
+    for _ in range(100):
+        print(calculate_fitness(create_individual(size)))
+    '''
+    
 if __name__ == "__main__": main()
