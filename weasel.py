@@ -11,7 +11,7 @@ def string_to_list(string_to_convert):
 def create_individual(size):
     individual = [] 
     for _ in range(size):
-        ascii_index = random.randint(32,127)
+        ascii_index = random.randint(32,126)
         individual.append(str(chr(ascii_index))) 
     return individual
 
@@ -35,5 +35,5 @@ def main():
     for _ in range(100):
         print(calculate_fitness(create_individual(size)))
     '''
-    
+
 if __name__ == "__main__": main()
