@@ -60,16 +60,6 @@ def main():
     time_taken = end - start
     print("The run took %dms" % time_taken)
 
-    # #Create some individuals
-    # individual1 = create_individual(size)
-    # individual2 = create_individual(size)
-
-    # print(calculate_fitness(individual1))
-
-    # print("Mutating 100 times")
-    # for _ in range(100):
-    #     individual1 = mutate_individual(individual1, size)
-    #     print(list_to_string(individual1) + " " + str(calculate_fitness(individual1)))
     
 
 if __name__ == "__main__": main()
