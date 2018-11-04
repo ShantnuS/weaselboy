@@ -46,9 +46,9 @@ def crossover_individuals(size, individual_A, individual_B):
     for i in range(size):
         random_value = random.uniform(0,1)
         if random_value < 0.5:
-            child.append(individual_A[i-1])
+            child.append(individual_A[i])
         else:
-            child.append(individual_B[i-1])
+            child.append(individual_B[i])
     
     return child
 
@@ -138,13 +138,13 @@ def run_ga_with_crossover(size, pop_size):
 
 def main():
     size = len(target) #This is how long the individuals will be 
-    pop_size = 500
+    pop_size = 10
 
     start = int(round(time.time() * 1000))
 
     #run_mutation_hill_clumber(size)
     #run_ga_without_crossover(size, pop_size)
-    #run_ga_with_crossover(size, pop_size)
+    run_ga_with_crossover(size, pop_size)
 
     '''
     indA = create_individual(size)
